@@ -11,8 +11,31 @@ rm_0s_by_row = function(data = v){
   if(!is.numeric(v) | !is.integer(v)){
     stop("The input vector is not a number.")
   }
-  for(i in 1:nrow(v)){
+  all.0 = NULL
+  for(i in 1:(nrow(v)-1)){
+    if(mean(v[i - n.d,]) != 0 | any(v[i,]) <0){
 
+    }
+    else{
+      all.0 = rbind(all.0,i)
+    }
+  }
+
+}
+
+rm_0s_by_col = function(data = v){
+  ## Checks to ensure the table contains numbers
+  if(!is.numeric(v) | !is.integer(v)){
+    stop("The input vector is not a number.")
+  }
+  all.0 = NULL
+  for(i in 1:(nrow(v)-1)){
+    if(mean(v[i,]) != 0 | any(v[,]) <0){
+
+    }
+    else{
+      all.0 = rbind(all.0,i)
+    }
   }
 
 }
