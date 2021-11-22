@@ -4,10 +4,10 @@
 \alias{rm_0s_by_row}
 \title{To remove rows of 0s}
 \usage{
-rm_0s_by_row(data = v)
+rm_0s_by_row(x)
 }
 \arguments{
-\item{v}{The table of numbers, must be a numeric or an integer vector.}
+\item{x}{The table of numbers, must be a numeric or an integer vector.}
 }
 \value{
 A numeric or integer table, with the table of all rows of 0s removed
