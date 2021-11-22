@@ -2,14 +2,17 @@
 #'
 #' Some description about the function.
 #'
-#' @param v Input vector, must be a character vector.
-#' @param patterns The Regex pattern to match, default will extract the first two words.
-#' @param repl The values to replace the pattern matched that was specified by `patterns`.
-#' @param ... Additional arguments to be passed to `[sub]` function.
-#' @return A character vector, with the binomial scientific names
-#' @examples get_binomial_name(c("Carex aquatilis Wahlenb.", "Boerhavia coulteri (Hook. f.) S. Watson"))
+#' @param v The table of numbers, must be a numeric or an integer vector.
+#' @return A numeric or integer table, with the table of all rows of 0s removed
+#' @export
 
-rm_0s_by_row = function(data = v, ){
-
+rm_0s_by_row = function(data = v){
+  ## Checks to ensure the table contains numbers
   if(!is.numeric(v) | !is.integer(v)){
+    stop("The input vector is not a number.")
+  }
+  for(i in 1:nrow(v)){
+
+  }
+
 }
